@@ -26,3 +26,5 @@ Welcome! This repository is the landing hub for **OPIM5512**. It contains starte
    git clone https://github.com/drdave-teaaching/OPIM5512.git
    cd OPIM5512
 ```
+
+...more to come! This is a work in progress.
