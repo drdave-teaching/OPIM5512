@@ -1,7 +1,7 @@
-# OPIM5512 — Course Repo for Dave's (Collaborative) Data Science materials.
+# OPIM5512 — Course Repo for Dr. Dave's (Collaborative) Data Science materials.
 
 
-Welcome! This repository is the landing hub for Dave's **OPIM 5512: Data Science Using Python**. It contains starter code, notebooks, and guides organized into five learning modules. Use this README to find materials, set up your environment, and start taking your DS chops to the next level.
+Welcome! This repository is the landing hub for Dr. Dave's **OPIM 5512: Data Science Using Python**. It contains starter code, notebooks, and guides organized into five learning modules. Use this README to find materials, set up your environment, and start taking your DS chops to the next level.
 
 ---
 
