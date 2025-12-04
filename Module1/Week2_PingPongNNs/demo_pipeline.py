@@ -1,6 +1,6 @@
 """
 A02 — Buddy Collab Pipeline
-Decision Tree Regression on California Housing Dataset
+MLP Regression on California Housing Dataset
 
 Students run:
     python src/pipeline.py load
@@ -15,9 +15,12 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.inspection import permutation_importance
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 
 
 # ---------------------------------------------------------
@@ -65,7 +68,7 @@ def cmd_clean(args):
 # Step 3: MODEL
 # ---------------------------------------------------------
 def cmd_model(args):
-    """Train a Decision Tree Regression model and save metrics + plots."""
+    """Train an MLP Regression model and save metrics + plots."""
     clean_path = DATA / "clean.csv"
     metrics_path = DATA / "metrics.json"
     preds_path = DATA / "preds_test.csv"
@@ -86,8 +89,23 @@ def cmd_model(args):
         X, y, test_size=0.2, random_state=42
     )
 
+    # MLP model inside a pipeline with scaling
+    model = Pipeline(
+        steps=[
+            ("scaler", StandardScaler()),
+            (
+                "mlp",
+                MLPRegressor(
+                    hidden_layer_sizes=(64, 32),
+                    activation="relu",
+                    random_state=42,
+                    max_iter=500,
+                ),
+            ),
+        ]
+    )
+
     # Train model
-    model = DecisionTreeRegressor(random_state=42)
     model.fit(X_train, y_train)
 
     # Predictions
@@ -117,17 +135,24 @@ def cmd_model(args):
     plt.savefig(FIGS / "residuals.png")
     plt.close()
 
-    # Feature importance bar chart
-    importances = pd.Series(model.feature_importances_, index=X.columns).sort_values()
+    # Permutation importance for MLP
+    # (Gives us a "feature importance" style plot)
+    result = permutation_importance(
+        model, X_test, y_test, n_repeats=10, random_state=42, n_jobs=-1
+    )
+    importances = pd.Series(result.importances_mean, index=X.columns).sort_values()
 
     plt.figure(figsize=(6, 4))
     importances.plot(kind="barh")
-    plt.title("Feature Importance (Decision Tree)")
+    plt.title("Feature Importance (Permutation, MLP)")
     plt.tight_layout()
     plt.savefig(FIGS / "feat_importance.png")
     plt.close()
 
-    print(f"[MODEL] Saved metrics.json, preds_test.csv, residuals.png, feat_importance.png")
+    print(
+        "[MODEL] Saved metrics.json, preds_test.csv, "
+        "residuals.png, feat_importance.png"
+    )
 
 
 # ---------------------------------------------------------
@@ -181,7 +206,9 @@ def main():
     p.set_defaults(func=cmd_model)
 
     # evaluate
-    p = subparsers.add_parser("evaluate", help="Plot predicted vs actual + print metrics")
+    p = subparsers.add_parser(
+        "evaluate", help="Plot predicted vs actual + print metrics"
+    )
     p.set_defaults(func=cmd_evaluate)
 
     args = parser.parse_args()
