@@ -1,4 +1,4 @@
-# Welcome to Week N!
+# Welcome to Week 3.1!
 
 This week is all about getting you up and running with some basic scraping. Once you are able to grab a bunch of text files off of CraigsList, you can use an agent to postprocess that data into useful features for modeling. 
 
