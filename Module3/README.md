@@ -1,8 +1,8 @@
 ### Related Materials
 For the live web scraping + GCP deployment example, visit the companion repo:  
-➡️ [drdave-teaching/myscrapers](https://github.com/drdave-teaching/myscrapers)
+➡️ [drdave-teaching/myscrapers](https://github.com/drdave-teaching/myscrapers) `# corresponds to initial setup in videos`
 
-➡️ [drdave-teaching/myscrapers/myscrapers-dww05002-v2](https://github.com/drdave-teaching/myscrapers-dww05002-v2) # has the LLM data materialized
+➡️ [drdave-teaching/myscrapers/myscrapers-dww05002-v2](https://github.com/drdave-teaching/myscrapers-dww05002-v2) `# has the LLM data expanded and materialized`
 
 # Welcome to Module 3!
 
