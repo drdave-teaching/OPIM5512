@@ -6,9 +6,6 @@ This week is all about getting you up and running with some basic scraping. Once
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4c31aea4-707f-4912-83c9-620d6c626865" />
 
 Title: 2001 Ford F350 4X4  Excelent  Condition Inside and Out. 97K$5,800Wallingford Ct
-Price: 
-Neighborhood: 
-URL: https://newhaven.craigslist.org/cto/d/wallingford-2001-ford-f350-4x4-excelent/7883704322.html
 Posted: 2025-09-23T17:55:26-0400
 ----------------------------------------
 BODY:
