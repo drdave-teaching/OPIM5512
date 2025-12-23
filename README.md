@@ -27,4 +27,4 @@ Welcome! This repository is the landing hub for Dr. Dave's **OPIM 5512: Data Sci
    cd OPIM5512
 ```
 
-...more to come! This is a work in progress.
+2. If you're a UConn student, follow my videos on HuskyCT! Happy modeling!
