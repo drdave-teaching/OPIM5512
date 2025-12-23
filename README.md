@@ -25,6 +25,6 @@ Welcome! This repository is the landing hub for Dr. Dave's **OPIM 5512: Data Sci
    ```bash
    git clone https://github.com/drdave-teaaching/OPIM5512.git
    cd OPIM5512
-```
-
-2. If you're a UConn student, follow my videos on HuskyCT! Happy modeling!
+   ```
+   
+2. **Explore!** If you're a UConn student, follow my videos on HuskyCT! Happy modeling!
