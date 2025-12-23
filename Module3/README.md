@@ -9,4 +9,5 @@ For the live web scraping + GCP deployment example, visit the companion repo:
 Now that you are comfortable writing some basic scrapers on GCP, let's see if we can translate messy .txt files into something actionable. We can do it locally in Colab, then try to scale in GCP.
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/284233bd-4e7f-4b94-a641-6592326263e2" />
+**Figure 1:** An image of the sample workflow from raw text to features for modeling.
 
