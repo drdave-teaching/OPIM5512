@@ -10,7 +10,7 @@ Welcome! This repository is the landing hub for Dr. Dave's **OPIM 5512: Data Sci
 | # | Module | What you’ll learn |
 |---|--------|--------------------|
 | 1 | **Setting up Tech Stack** | Git/GitHub, VS Code, Conda/venv, notebooks, reproducibility, PR workflow. |
-| 2 | **Hyperparameter Tuning and xAI (Explainable ML)** | Interpretable models, feature importance, partial dependence, SHAP, model reporting. |
+| 2 | **Hyperparameter Tuning and xAI (Explainable ML)** | Interpretable models, feature importance, partial dependence, model reporting. |
 | 3 | **Web Scraping & Cloud Resources** | BeautifulSoup basics, ETL, cloud jobs (GCP) & storage. |
 | 4 | **Time Series Analytics** | Resampling, decomposition, TSFresh, forecasting workflow & evaluation. |
 | 5 | **Text Analytics** | Cleaning text, tokenization, embeddings, basic classifiers. |
